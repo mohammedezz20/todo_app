@@ -39,23 +39,7 @@ class HoleLayout extends StatelessWidget {
           child: Scaffold(
             key: key,
 
-            // bottomNavigationBar: BottomNavigationBar(
-            //   type: BottomNavigationBarType.fixed,
-            //   showSelectedLabels: true,
-            //   currentIndex:   cubit.currentindex,
-            //   onTap: (index) {
-            //
-            //       cubit.changeindex(index);
-            //
-            //   },
-            //   items: const [
-            //     BottomNavigationBarItem(icon: Icon(Icons.task),
-            //         label: "Tasks"),
-            //     BottomNavigationBarItem(icon: Icon(Icons.done_all),
-            //         label: "Done"),
-            //S
-            //   ],
-            // ),
+         
             floatingActionButton: FloatingActionButton(
               onPressed: () {
                 if(cubit.isbuttomsheetshow) {
@@ -115,20 +99,6 @@ class HoleLayout extends StatelessWidget {
                 cubit.pageController.jumpToPage(index);
               },
             ),
-            // body: Container(
-            //     color: HexColor("#ebebeb"),
-            //     child: Column(
-            //       children: [
-            //         Container(height: 80, alignment: Alignment.center,
-            //           child: Text("${cubit.title[cubit.currentindex]}", style: const TextStyle(
-            //               fontSize: 25, fontWeight: FontWeight.bold
-            //           ),),),
-            //
-            //         // cubit.screens[cubit.currentindex],
-            //       ],
-            //     ),
-            //   ),
-
           ),
         );
 
@@ -188,15 +158,6 @@ Widget createbuttomsheet(context){
                 padding: const EdgeInsets.only(top:15),
                 child: defaulttextFaild(lable: 'Task Time',
                     keyboardtype: TextInputType.datetime, controller:timecontroler,
-                    // validate: (val){
-                    //   if(val=="")
-                    //   {
-                    //     return "Task Time must not be empty";
-                    //   }
-                    //   else {
-                    //     return null;
-                    //   }
-                    // },
 
                     prefixicon: Icons.watch_later_outlined ,
 
@@ -214,16 +175,6 @@ Widget createbuttomsheet(context){
                 padding: const EdgeInsets.only(top:15),
                 child: defaulttextFaild(lable: 'Task Date',
                     keyboardtype: TextInputType.datetime, controller:datecontroler,
-                    // validate: (val){
-                    //   if(val=="")
-                    //   {
-                    //     return "Task Date must not be empty";
-                    //   }
-                    //   else {
-                    //     return null;
-                    //   }
-                    // },
-
                     prefixicon: Icons.date_range ,
                     ispass: false,
                     ontap: (){
